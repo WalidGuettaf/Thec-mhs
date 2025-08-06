@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    padding: 5px 80px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(59, 6, 6);
+}
+header .logo-co ,#home .img {    
+    user-select: none;
+}
+header .logo{
+    width: 75px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+header nav{
+    font-size:  1.6rem;
+    display: flex;
+}
+header .nav-link{
+    margin-right: 35px;
+    color: rgb(176, 153, 19);
+    user-select: none;
+    padding: 15px;
+    border-radius: 15px;
+}
+header .nav-link::after{
+    content: "";
+    display: block;
+    width: 0%;
+    position: relative;
+    bottom: -3px;
+    height: 5px;
+    background-color: rgb(196, 169, 14);
+    border-radius: 3px;
+    /* transform: scaleX(0); */
+    transition: 0.3s width ease;
+}
+
+header .nav-link:hover:after{
+    width: 90%;
+
+  /* transform: scaleX(1); */
+}
+/* header .nav-link:hover ::after{
+    background-color: black;
+    color: aliceblue;
+} */
+#open-nav-bar,#close-nav-bar{
+    display: none;
+}
+#home{
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 100px;
+    align-items: center;
+    background: rgb(59, 6, 6);
+    /* background-image:linear-gradient(black, rgb(49, 46, 46)); */
+}
+#home .details{
+    align-self: first baseline;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.register{
+    transition: 0.3s ease;align-self: center;
+    padding: 15px;font-size: 1.4rem;color: white;border: 1px solid white;
+    width: fit-content;border-radius: 20px;margin-left: 25px;margin-top: 25px;
+}
+.register:hover{
+    background-color: darkorange;
+    color: black;
+    border: black;
+}
+#home #thec-hero{
+    width: 300px;
+    border-radius: 50%;
+}
+#home .details .club-name {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    animation: textsteps 2.5s  infinite steps(26);
+    animation-delay:1s ;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: 2px solid rgb(255, 255, 255) ;
+    white-space: nowrap;
+    margin:25px 0;
+} 
+
+@keyframes textsteps{
+    0%{
+        width:0% ;
+    }
+    90%{
+        width:100%;
+    }
+    100%{
+        width:100%;
+    }
+}
+#home .symbols{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: bisque;
+    word-spacing: 2px;letter-spacing: 2px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+#home .def{
+    font-size: 1.7rem;
+    color: gold;
+    margin-left: 30px;
+}
+#about {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 100px ;
+    text-align: center;
+    gap: 25px;
+}
+#about .title{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+#about .title:after{
+    content:"";
+    width: 85px;
+    border-radius: 4px;
+
+    margin: 10px auto;
+    height: 5px;
+    background-color: yellowgreen;
+    display: block;
+}
+#about .about-us{
+    padding: 0 50px;
+    font-size: 1.5rem;
+}
+#about .social-media{
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+#about .social-media .sm-icon{
+    font-size: 2.5rem;
+    transition: 0.3s  ease;
+}
+#about .social-media .sm-icon:hover{
+    color: rgb(174, 150, 10);
+    scale: 1.1;
+}
+
+
+#activities{
+    padding: 80px 100px;
+    background-color: rgb(59, 6, 6);
+}
+.activity{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    text-align: center; letter-spacing: 2px;
+}
+.activity:after{
+    content:"";
+    width: 85px;
+    border-radius: 4px;
+    margin: 10px auto;
+    height: 5px;
+    background-color: yellowgreen;
+    display: block;
+    margin-bottom: 65px;
+}
+
+#activities .cards{
+    text-align: center;
+    color: white;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(4,1fr);
+    margin: 45px  auto 0;
+}
+#activities .cards .card{
+    border: 1px solid white;
+    padding: 25px;
+    color: white;
+    cursor: pointer;
+    max-width: 275px;
+    text-align: center;
+    justify-self: center;
+}
+
+#activities .cards .card .icone {
+    width: 100%;
+    font-size: 7rem;
+    user-select: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    color: white;
+    border-bottom: 1px solid white;
+}
+#activities .cards .card .title{
+    font-size: 1.8rem;font-weight: 700;margin-bottom: 20px;
+}
+#activities .cards .card .desc{
+    font-size: 1.4rem;
+}
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.089);
+}
+.card:hover .icone{
+    color: rgb(0, 0, 0);
+
+}
+#contact{
+    padding: 70px 100px 20px;
+}
+#contact .contact-form{
+    display: flex;flex-direction: column;gap: 25px;
+    justify-content: center;align-items:first baseline;margin: 60px auto;max-width: 500px;
+}
+#contact .contact-form .form-eleme{
+    display: flex;align-items: center;justify-content: space-between;width: 100%;
+}
+#contact .contact-form label {
+font-size: 1.5rem;margin-right: 20px;white-space:nowrap;
+}
+.form-eleme input{
+    width: 100%;
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.form-eleme textarea{
+    width: 100%;
+    height: 70px;padding: 5px ;font-size: 1.2rem;
+}
+#contact .contact-form button{
+    padding: 10px 20px; border-radius: 20px;font-size: 1.6rem; margin: auto;
+    border:solid black 1px;
+    transition: 0.3s ease;
+}
+#contact .contact-form button:hover{
+    background-color: black;color: white;border: white;
+}
+#contact .title{
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+}
+#contact .title:after{
+    content:"";
+    width: 95px;
+    border-radius: 4px;
+    margin: 10px auto;
+    height: 5px;
+    background-color: yellowgreen;
+    display: block;
+}
+footer{
+    padding: 20px 5px ; display: flex; justify-content: space-evenly;
+    align-items: center; background-color: black;color: white;
+}
+footer .copyright{
+    font-size: 1.5rem;
+}
+footer .email,footer .location{
+    font-size: 1.3rem;display: flex;gap: 10px;align-items: center;
+}
+footer .location{
+    text-transform: capitalize;
+}
+@media screen and (max-width: 900px){
+    header{
+        padding:5px 25px ;
+    }
+    header nav {
+        background-color: aliceblue;
+        position: fixed;
+        left: -600px;
+        top: 0;
+        height: 100%;
+        font-size:  1.6rem;
+        display: flex;
+        gap: 80px;
+        width: 50%;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s left ease;
+        
+    }
+    .home-link{
+        margin-top: 90px;
+    }
+    #open-nav-bar{
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        font-size: 2rem;
+        color: white;
+        display: block;
+    }
+    #close-nav-bar{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.8rem;
+        color:rgb(176, 153, 19) ;
+        display: block;
+    }
+    .opened{
+        left: 0;
+    }
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding-top: 150px;
+    }
+    #home #thec-hero{
+        margin-top: 30px;
+        width: 250px;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 501px){
+    header{
+        padding:5px 35px ;
+    }
+
+    #home{
+        padding: 150px 5px;
+        gap: 45px;
+        align-items: center;
+        background: rgb(59, 6, 6);
+        width: 100%;
+    }
+    #home .details{
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        margin: 0 auto;
+    }
+    #home .details .club-name{
+        font-size: 2.3rem;
+        padding-right: 1px;
+        margin: 25px auto;
+    }
+    #home .symbols{
+        font-size: 1.9rem;
+        margin-right: auto;margin-left: 25px;
+    }
+    #home .def{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    #activities .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 500px) and (min-width:401px){
+    #home .details{
+        width: 100%;
+        text-align: center;
+        gap: 45px;
+    }
+    #home{
+        padding: 150px 10px;
+    }
+    #home .details .club-name{
+        font-size: 1.8rem;
+        padding-right: 1px;
+        margin: 25px auto;
+    }
+    #home .symbols{
+        font-size: 1.6rem;
+        margin-right: auto;margin-left: 15px;
+    }
+    #home .def{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-left: 5px;
+    }
+    #activities .cards{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 700px){
+    #activities .cards{
+        grid-template-columns: 1fr;
+    }
+    #about {
+        padding-right:10px ;
+        padding-left: 10px;
+    }
+    #about .about-us{
+        width: 100%;
+        margin: auto 0;
+    }
+    footer{
+        padding: 20px 2px ;
+        text-align: center; 
+        gap: 15px;
+    }
+    footer .copyright{
+        font-size: 1.2rem;
+    }
+    footer .email,footer .location{
+        font-size: 1.1rem;display: flex;gap:0;align-items: center;
+    }
+    footer .location{
+        text-transform: capitalize;
+    }
+}
+@media screen and (max-width: 400px) {
+
+    #home{
+        padding: 150px 5px;
+        gap: 45px;
+        align-items: center;
+        background: rgb(59, 6, 6);
+        width: 100%;
+    }
+    #home .details{
+        text-align: center;
+        gap: 45px;
+    }
+    #home .details .club-name{
+        font-size: 1.5rem;
+        padding-right: 1px;
+        margin: 25px auto;
+    }
+    #home .symbols{
+        font-size: 1.6rem;
+        margin-right: auto;margin-left: 25px;
+    }
+    #home .def{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-left: 5px;
+    }
+    #about{
+        padding: 55px 0;
+    }
+    footer{
+        padding: 20px 0px ;
+        text-align: center; 
+        gap: 15px;
+    }
+    footer .copyright{
+        font-size: 1rem;
+    }
+    footer .email,footer .location{
+        font-size: 0.9rem;display: flex;gap:2px;align-items: center;
+    }
+    footer .location{
+        text-transform: capitalize;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    #contact{
+      padding: 70px 10px 20px;
+    }
+}
