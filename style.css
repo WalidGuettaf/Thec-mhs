@@ -412,6 +412,9 @@ footer .location{
     #activities .cards{
         grid-template-columns: 1fr;
     }
+    #activities{
+        padding: 90px 80px;
+    }
     #about {
         padding-right:10px ;
         padding-left: 10px;
